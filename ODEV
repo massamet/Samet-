@@ -1,1 +1,39 @@
-d
+import java.util.Scanner;
+public class odevdızıler{	
+	public static void IndexOfMax(int sayilar[]){
+		int buyuksayi;
+		buyuksayi = sayilar[0];
+		
+		for (int i=1;i<sayilar.length;i++){
+			if (sayilar[i]>buyuksayi)
+			{
+                           buyuksayi = sayilar[i];
+			}				
+		}		
+		System.out.println("Girdiğiniz sayıların en büyüğü = "+buyuksayi+"'dir/dür.");
+	}
+	public static void main(String[] args) {
+		
+		System.out.print("Diziye kaç eleman girmek istersiniz: ");
+		Scanner scn = new Scanner(System.in);
+		int elemansayisi = scn.nextInt();
+		
+		int sayilar[] = new int[elemansayisi];
+      
+		for (int i=0;i<sayilar.length;i++){
+			System.out.print((i+1)+". Sayı giriniz: ");
+			sayilar[i]=scn.nextInt();
+		}
+		System.out.print("Girilen sayılar = {"+sayilar[0]);
+		for (int i=1;i<sayilar.length;i++){
+			System.out.print(", "+sayilar[i]);
+		}
+		System.out.println("}");
+
+		IndexOfMax(sayilar);
+
+		scn.close();
+	}
+}
+
+SAMET GÜLER 
